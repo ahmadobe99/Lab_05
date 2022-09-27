@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:myapp/secreens/home.dart';
+import 'package:myapp/secreens/loginpage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models.dart/urlmodel.dart';
-import 'models.dart/urlmodels.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+
+class Homepage extends StatefulWidget {
+  const Homepage({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Homepage> createState() => _HomepageState();
 }
 
-class _LoginState extends State<Login> {
+class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -129,10 +129,10 @@ class _LoginState extends State<Login> {
                     Divider(height: 200,),
                     ElevatedButton.icon(onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) {
-                        return Home();
+                        return loginpage();
                       },));
                       
-                    }, icon:Icon(Icons.home) , label: Text("Back to home page"))
+                    }, icon:Icon(Icons.login) , label: Text("Log in page"))
                   ],
                 ),
               ),
